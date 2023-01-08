@@ -30,12 +30,10 @@ for i in range(T):
                     arr.popleft()
                 else:
                     arr.pop()
+
         if p.count('R') % 2 == 1:
             arr = deque(list(reversed(arr)))
-            
+
         print('[', end = '')
-        for j in range(len(arr) - 1):
-            print(arr[0], end = ',')
-            arr.popleft()
-        print(arr[0], end = '')
+        print(','.join(arr), end = '')
         print(']')
